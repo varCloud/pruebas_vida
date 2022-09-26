@@ -1,0 +1,54 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">CRM-CEDICOOP & BLUECLOUD</a></li>
+    <li class="breadcrumb-item active" aria-current="page">CURSOS</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Cursos</h4>
+        <p class="card-description mb-0">Este espacio de trabajo esta desinado a crear cursos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row inbox-wrapper">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <button type="button" class="btn btn-primary float-right" (click)="onAgregar()">Agregar</button>
+          </div>
+        </div>
+        <div class="row">
+          <h6 class="card-title">Usuarios</h6>
+          <div class="table-responsive">
+            <ngx-datatable
+            class="bootstrap"
+            [rows]="rows"
+            [loadingIndicator]="loadingIndicator"
+            [columnMode]="ColumnMode.force"
+            [footerHeight]="50"
+            [limit]="10"
+            rowHeight="auto"
+          >
+            <ngx-datatable-column name="Id"  prop="idCurso"></ngx-datatable-column>
+            <ngx-datatable-column name="Nombre"  prop="descripcion"></ngx-datatable-column>
+            <ngx-datatable-column name="Costo" prop="costo"></ngx-datatable-column>
+            <ngx-datatable-column name="Mail" prop="mail"></ngx-datatable-column>
+            <ngx-datatable-column name="Usuario" prop="usuario"></ngx-datatable-column>
+            <ngx-datatable-column name="Rol" prop="Roles.descripcion"></ngx-datatable-column>
+            <ngx-datatable-column name="Acciones"></ngx-datatable-column>
+          </ngx-datatable>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

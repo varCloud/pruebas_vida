@@ -1,0 +1,52 @@
+<div class="row inbox-wrapper">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-primary" (click)="iniciar.click()">Comenzar onboarding MATI...!!</button>
+            </div>
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-success" (click)="this.app()">Comenzar onboarding INCODE...!!</button>
+            </div>
+          </div>
+          <div class="row">
+            <div id="cameracontainer" #cameracontainer ></div>
+          </div>
+          <!-- <div class="row">
+            <div class="d-flex" style="gap: 10px;">
+              <button type="button" class="btn btn-secondary" (click)="fileIFront.click()">Cargar INE frontral</button>
+              <input type="file" id="fileIFront" [hidden]="true" #fileIFront>
+
+              <button type="button" class="btn btn-primary" (click)="fileIReverso.click()">Cargar INE Reverso </button>
+              <input type="file" id="fileIReverso" [hidden]="true" #fileIReverso>
+            </div>
+          </div> -->
+          <!-- <br />
+          <div class="row">
+            <div class="col-md-12">
+              <video class="video" style="width:360px !important; height: 360px !important;" #video autoplay
+                controls></video>
+              <span class="m-1"></span>
+              <video class="video" style="width:360px !important; height: 360px !important;" controls
+                #recordedVideo></video>
+              <br>
+              <button class="btn btn-primary btn" *ngIf="!isRecording" (click)="startRecording()">Start
+                Recording</button>
+              <button class="btn btn-warning btn" *ngIf="isRecording" (click)="stopRecording()">Stop Recording</button>
+            </div>
+          </div> -->
+          <br />
+          <div class="row">
+            <div class="col-md-12">
+              <mati-button [hidden]="true" #iniciar id="mati_button" clientid="631f7c1151bacf001df529af"
+                flowId="631f7c773759bb001d1bc79b" color="#72B600"
+                metadata='{"key": "WTOHKMHQ44GRSWTPGARV5UHTZFFKUNYO" , "fixedLanguage":"es"}'></mati-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
