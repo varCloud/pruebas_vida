@@ -1,19 +1,17 @@
 <div class="row inbox-wrapper">
   <div class="col-lg-12">
-    <div class="card">
+    <div class="card" *ngIf="muestraBtnIncode">
       <div class="card-body">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-auto">
-              <button type="button" class="btn btn-primary" (click)="iniciar.click()">Comenzar onboarding MATI...!!</button>
+              <button type="button" class="btn btn-primary" *ngIf="false" (click)="iniciar.click()">Comenzar onboarding MATI...!!</button>
             </div>
-            <div class="col-md-auto">
+            <div class="col-md-auto" >
               <button type="button" class="btn btn-success" (click)="this.app()">Comenzar onboarding INCODE...!!</button>
             </div>
           </div>
-          <div class="row">
-            <div id="cameracontainer" #cameracontainer ></div>
-          </div>
+
           <!-- <div class="row">
             <div class="d-flex" style="gap: 10px;">
               <button type="button" class="btn btn-secondary" (click)="fileIFront.click()">Cargar INE frontral</button>
@@ -46,6 +44,26 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" #div>
+  <div id="cameracontainer" #cameracontainer ></div>
+</div>
+
+<div class="row inbox-wrapper" *ngIf="this.procesoFinalizado">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+          <p>Face Match: {{this._selfie?.faceMatch}}</p>
+          <p>Nombre: {{this._dataOCR?.name?.fullName}}</p>
+          <p>Direccion: {{this._dataOCR?.address}}</p>
+          <p>CP: {{this._dataOCR?.addressFields?.postalCode}}</p>
+          <p>Tipo de ID: {{this._dataOCR?.typeOfId}}</p>
+          <p>{{this._selfie | json}}</p>
+          <p>{{this._processFace | json}}</p>
+          <p>{{this.DataOCR | json}}</p>
       </div>
     </div>
   </div>
